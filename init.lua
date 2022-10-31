@@ -282,7 +282,7 @@ local config = {
                         { "github/copilot.vim" },
                         { "psliwka/vim-smoothie" },
                         { "nvim-treesitter/nvim-treesitter-context" },
-                        { "justinmk/vim-sneak" }
+                        { "justinmk/vim-sneak" },
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
@@ -326,6 +326,15 @@ local config = {
                         },
                         event_handlers = {}
                 },
+                ["gitsigns"] = {
+                        current_line_blame = true,
+                        current_line_blame_opts = {
+                                virt_text = true,
+                                virt_text_pos = 'eol',
+                                delay = 0,
+                                ignore_whitespace = false,
+                        },
+                }
         },
 
         -- LuaSnip Options
