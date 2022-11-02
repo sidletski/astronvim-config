@@ -289,7 +289,6 @@ local config = {
                         { "tpope/vim-surround" },
                         { "github/copilot.vim" },
                         { "psliwka/vim-smoothie" },
-                        { "nvim-treesitter/nvim-treesitter-context" },
                         { "justinmk/vim-sneak" },
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
@@ -419,10 +418,6 @@ local config = {
                 --   },
                 -- }
         end,
-}
-
-require 'treesitter-context'.setup {
-        enable = true
 }
 
 vim.cmd [[

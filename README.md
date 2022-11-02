@@ -6,7 +6,6 @@ Configuration to make your [AstroNvim](https://github.com/AstroNvim/AstroNvim) p
 
 - [vim-suround](https://github.com/tpope/vim-surround)
 - [vim-smoothie](https://github.com/psliwka/vim-smoothie)
-- [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 - [copilot](https://github.com/github/copilot.vim)
 
 ## Custom mappings
