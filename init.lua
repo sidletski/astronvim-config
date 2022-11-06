@@ -270,7 +270,7 @@ local config = {
                         ["gh"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Hover information" },
                 },
                 i = {
-                        ["<C-l>"] = { "copilot#Accept('')", silent = true, expr = true, script = true },
+                        ["<C-l>"] = { function() vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true) end, silent = true, expr = true, script = true },
                         ["<C-s>"] = { "<esc>:w<cr>:call feedkeys('a','n')<cr>" },
                 },
                 v = {
@@ -290,6 +290,11 @@ local config = {
                         { "github/copilot.vim" },
                         { "psliwka/vim-smoothie" },
                         { "justinmk/vim-sneak" },
+                },
+                bufferline = {
+                        options = {
+                                show_buffer_close_icons = false,
+                        }
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
