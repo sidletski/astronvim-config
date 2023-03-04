@@ -35,7 +35,7 @@ local config = {
         },
 
         -- Set colorscheme to use
-        colorscheme = "default_theme",
+        colorscheme = "PaperColor",
 
         -- Add highlight groups in any theme
         highlights = {
@@ -290,6 +290,8 @@ local config = {
                         { "github/copilot.vim" },
                         { "psliwka/vim-smoothie" },
                         { "justinmk/vim-sneak" },
+                        { "olimorris/onedarkpro.nvim" },
+                        { "NLKNguyen/papercolor-theme" },
                 },
                 bufferline = {
                         options = {
@@ -431,6 +433,8 @@ vim.cmd [[
         au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
         augroup END
 ]]
+
+vim.cmd("set background=light")
 
 vim.api.nvim_create_autocmd('BufWritePre', {
         pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
